@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.use({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'http://app:3000'
 });
 
 test('should return correct result for addition', async ({ request }) => {
