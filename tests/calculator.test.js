@@ -1,5 +1,9 @@
 const { test, expect } = require('@playwright/test');
 
+test.use({
+    baseURL: 'http://localhost:3000'
+});
+
 test('should return correct result for addition', async ({ request }) => {
     const response = await request.post('/calculate', {
         data: { num1: 1, num2: 2, operation: 'add' }
